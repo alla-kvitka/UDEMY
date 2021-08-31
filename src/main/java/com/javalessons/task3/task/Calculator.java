@@ -22,16 +22,22 @@ System.out.printf("%d, %15.2f, %12.2f, %8.2f, %8.2f, %15.2f, %15.2f%n", periodCo
  %n - знак переноса строки. Больше можно почитать тут: easycode*/
 
 public class Calculator {
-    private  final int loanAmount;  // loanAmount (объем кредита)
+    //оголошення полів класа
     private static final int MONTHS = 12;
+    private  final int loanAmount;  // loanAmount (объем кредита)
     private  final int years ;     //years (количество лет на которое берется ипотека)
-    private  final int interestRate; //interestRate (ежегодный процент под который банк выдает кредит)
+    private  final double interestRate; //interestRate (ежегодный процент под который банк выдает кредит)
     private  final int extraPayment; //extraPayment (дополнительный ежемесячный платеж или же сумма, которую вносит плательщик сверх обязательной, например для ускоренного погашения).
-
-    public Calculator(int loanAmount,int years, int interestRate, int extraPayment) {
+   //створення контрруктора для ініціалізації полів
+    public Calculator(final int loanAmount, final int years, double interestRate, int extraPayment) {
         this.loanAmount = loanAmount;
         this.interestRate = interestRate;
         this.extraPayment = extraPayment;
         this.years = years;
     }
+
+    public void tableCalculate () {
+        System.out.println("MONTH,  STARING_BALANCE,  PAYMENT,  INTEREST,  PRINCIPAL,  ENDING_BALANCE,  TOTAL_INTEREST");
+    }
+
 }
