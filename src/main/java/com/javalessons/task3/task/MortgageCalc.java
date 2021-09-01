@@ -5,7 +5,7 @@ public class MortgageCalc {
 
     public static void main(String[] args) {
 
-        Calculator customer1 = new Calculator(1000,4,0.5,0);
+        Calculator customer1 = new Calculator(100,0.5,5,50);
         customer1.tableCalculate();
 
 
